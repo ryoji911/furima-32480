@@ -11,8 +11,7 @@
 | first_name         | string  | null: false |
 | last_name_reading  | string  | null: false |
 | first_name_reading | string  | null: false |
-| birth_year         | integer | null: false |
-| birth_month        | integer | null: false |
+| birth_day          | date    | null: false |
 
 ### Association
 - has_many :items
@@ -27,11 +26,11 @@
 | image       | text       | null: false |
 | item_name   | string     | null: false |
 | explanation | string     | null: false |
-| category    | integer    | null: false |
-| status      | integer    | null: false |
-| shipping    | integer    | null: false |
-| area        | integer    | null: false |
-| days        | integer    | null: false |
+| category_id | integer    | null: false |
+| status_id   | integer    | null: false |
+| shipping_id | integer    | null: false |
+| area_id     | integer    | null: false |
+| days_id     | integer    | null: false |
 | price       | integer    | null: false |
 | user        | references | null: false, foreign_key: true |
 
@@ -43,12 +42,12 @@
 
 | Column        | Type    | Options     |
 | ------------- | ------- | ----------- |
-| postal_code   | integer | null: false |
+| postal_code   | string  | null: false |
 | prefecture    | integer | null: false |
 | city          | string  | null: false |
 | house_number  | integer | null: false |
 | building_name | string  |             |
-| phone_number  | integer | null: false |
+| phone_number  | string  | null: false |
 
 ### Association
 - belongs_to :user
