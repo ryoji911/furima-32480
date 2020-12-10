@@ -1,6 +1,6 @@
-<mxfile host="65bd71144e" modified="2020-12-10T10:01:39.854Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.51.0 Chrome/83.0.4103.122 Electron/9.3.3 Safari/537.36" version="13.10.0" etag="fJkAkzTVQ2-U0zzjjcIg" type="embed">
+<mxfile host="65bd71144e" modified="2020-12-10T10:02:28.665Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.51.0 Chrome/83.0.4103.122 Electron/9.3.3 Safari/537.36" version="13.10.0" etag="OeiZoAdBERYOFr97CL4k" type="embed">
     <diagram id="lF-s3Sog6GxGbShrsrFU" name="ページ1">
-        <mxGraphModel dx="398" dy="585" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#F1FAEE" math="0" shadow="0">
+        <mxGraphModel dx="645" dy="585" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#F1FAEE" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -13,7 +13,7 @@
                 <mxCell id="28" value="Items" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=20;labelBackgroundColor=none;strokeWidth=4;fillColor=#A8DADC;fontColor=#1D3557;strokeColor=#457B9D;rounded=1;" vertex="1" parent="1">
                     <mxGeometry x="400" y="320" width="170" height="240" as="geometry"/>
                 </mxCell>
-                <mxCell id="31" value="image&#10;item_name&#10;explanation&#10;category&#10;status&#10;shipping&#10;area&#10;days&#10;price&#10;user_id" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=17;align=center;fontColor=#1D3557;rounded=1;" vertex="1" parent="28">
+                <mxCell id="31" value="image&#10;item_name&#10;explanation&#10;category_id&#10;status_id&#10;shipping_id&#10;area_id&#10;days_id&#10;price&#10;user_id" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=17;align=center;fontColor=#1D3557;rounded=1;" vertex="1" parent="28">
                     <mxGeometry y="26" width="170" height="214" as="geometry"/>
                 </mxCell>
                 <mxCell id="32" value="Addresses" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=20;labelBackgroundColor=none;strokeWidth=4;fillColor=#A8DADC;fontColor=#1D3557;strokeColor=#457B9D;rounded=1;" vertex="1" parent="1">

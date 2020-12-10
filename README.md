@@ -16,14 +16,12 @@
 ### Association
 - has_many :items
 - has_many :purchases
-- has_one :address
 
 
 ## items テーブル
 
 | Column      | Type       | Options     |
 | ----------- | ---------- | ----------- |
-| image       | text       | null: false |
 | item_name   | string     | null: false |
 | explanation | string     | null: false |
 | category_id | integer    | null: false |
@@ -36,7 +34,7 @@
 
 ### Association
 - belongs_to :user
-- has-one :purchase
+- has_one :purchase
 
 ## addresses テーブル
 
@@ -50,7 +48,6 @@
 | phone_number  | string  | null: false |
 
 ### Association
-- belongs_to :user
 - has_one :purchase
 
 ## purchases テーブル
@@ -62,5 +59,5 @@
 
 ### Association
 - belongs_to :user
-- belongs_tp :user
+- belongs_to :item
 - belongs_to :address
