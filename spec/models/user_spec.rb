@@ -80,5 +80,40 @@ RSpec.describe User, type: :model do
       @user.valid?
       expect(@user.errors.full_messages).to include("Birth day can't be blank")
     end
+    it 'emailが登録済みの場合保存できないこと' do
+      @user.save
+      another_user = FactoryBot.build(:user, email: @user.email)
+      another_user.valid?
+      expect(another_user.errors.full_messages).to include("Email has already been taken")
+    end
+    it 'emailに@が含まれていない場合保存できない' do
+      @user.email = "testtest"
+      @user.valid?
+      expect(@user.errors.full_messages).to include("Email is invalid")
+    end
+    it 'passwordが半角英字のみの場合保存できない（半角英数字混合以外の場合を確認1）' do
+      @user.password = "aaaaaa"
+      @user.password_confirmation = "aaaaaa"
+      @user.valid?
+      expect(@user.errors.full_messages).to include("Password can't be include both letters and numbers.")
+    end
+    it 'passwordが半角数字のみの場合保存できない（半角英数字混合以外の場合を確認2）' do
+      @user.password = "999999"
+      @user.password_confirmation = "999999"
+      @user.valid?
+      expect(@user.errors.full_messages).to include("Password can't be include both letters and numbers.")
+    end
+    it 'passwordが全角英数字の場合保存できない（半角英数字混合以外の場合を確認3）' do
+      @user.password = "１２３xyz"
+      @user.password_confirmation = "１２３xyz"
+      @user.valid?
+      expect(@user.errors.full_messages).to include("Password can't be include both letters and numbers.")
+    end
+    it 'passwordとpassword_confirmationが一致しない場合保存できない' do
+      @user.password = "111aaa"
+      @user.password_confirmation = "222bbb"
+      @user.valid?
+      expect(@user.errors.full_messages).to include("Password confirmation doesn't match Password")
+    end
   end
 end
