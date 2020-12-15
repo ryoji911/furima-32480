@@ -9,6 +9,10 @@ RSpec.describe Order, type: :model do
       it '全てが入力されていれば購入できること' do
         expect(@order).to be_valid
       end
+      it 'building_nameが抜けていても登録できること' do
+        @order.building_name = ""
+        expect(@order).to be_valid
+      end
     end
 
     context '商品購入ができない時' do
